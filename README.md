@@ -1,4 +1,4 @@
-# Parcel Example
+# Parcel Demo
 
 To use `git clone https://github.com:kurisutianmoscosa/parcel-no-config-sample.git`. Then `npm install`.
 
