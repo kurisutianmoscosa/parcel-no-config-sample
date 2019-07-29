@@ -23,7 +23,7 @@ class App extends React.Component {
                 </Card.Text>
                 <Card.Link
                   className="text-success"
-                  href="https://github.com/methodbox/parcel-example"
+                  href="https://github.com/kurisutianmoscosa/parcel-no-config-sample.git"
                 >
                   Learn More
                 </Card.Link>

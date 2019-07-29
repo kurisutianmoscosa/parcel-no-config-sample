@@ -1,6 +1,6 @@
 # Parcel Demo
 
-To use `git clone https://github.com:kurisutianmoscosa/parcel-no-config-sample.git`. Then `npm install`.
+To use `git clone https://github.com/kurisutianmoscosa/parcel-no-config-sample.git`. Then `npm install`.
 
 ### Alternative to create-react-app with zero config
 
