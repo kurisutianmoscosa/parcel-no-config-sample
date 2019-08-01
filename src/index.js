@@ -1,40 +1,30 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-// Add the following two lines
-import { Card } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
+
+import { Header } from './components/Header';
+import { Home } from './components/Home';
 
 class App extends React.Component {
   render() {
-    return (
+
+    let initAge = 25;
+
+    return(
       <div className="container">
-        <div className="row mt-5">
-          <div className="col-sm">
-            <h1 className="text-center mb-3">Hello, World.</h1>
-            <Card style={{ maxWidth: "50%" }} className="mx-auto">
-              <Card.Header>Parcel Example</Card.Header>
-              <Card.Body>
-                <Card.Subtitle className="mb-4 text-muted">
-                  A Parcel.js Example Built with React
-                </Card.Subtitle>
-                <Card.Text>
-                  I setup Parcel and built an app in 5 minutes and you can, too!
-                  Click the button below to learn more!
-                </Card.Text>
-                <Card.Link
-                  className="text-success"
-                  href="https://github.com/kurisutianmoscosa/parcel-no-config-sample.git"
-                >
-                  Learn More
-                </Card.Link>
-              </Card.Body>
-            </Card>
+        <div className="row">
+          <div className="col-xs-10 col-xs-offset-1">
+            <Header/>
+          </div>
+        </div>
+        <div className="row">
+        <div className="col-xs-10 col-xs-offset-1">
+            <Home name={"Christian"} initialAge={initAge}/>
           </div>
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
-const mountApp = document.getElementById("app");
+const mountApp = document.querySelector("#app");
 ReactDOM.render(<App />, mountApp);
