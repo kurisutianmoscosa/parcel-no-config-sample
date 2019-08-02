@@ -10,6 +10,42 @@ export class Home extends React.Component {
             status: 0,
             homeLink: props.initialLinkName
         };
+        setTimeout(() => {
+            this.setState({
+                status: 1,
+            });
+        }, 1000);
+        console.log("Constructor");
+    }
+
+    componentWillMount() {
+        console.log("Component will mount");
+    };
+
+    componentDidMount() {
+        console.log("Component did mount");
+    };
+
+    componentWillReceiveProps(nextProps) {
+        console.log("Component will receive props", nextProps);
+    };
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("Should component update", nextProps, nextState);
+        return true;
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log("Component will update", nextProps, nextState);
+        //asd
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log("Component did update", prevProps, prevState);
+    }
+
+    componentWillUnmount() {
+        console.log("Component will unmount");
     }
 
     onMakeOlder() {
@@ -31,7 +67,7 @@ export class Home extends React.Component {
     render() {
         return (
             <div>
-                <p>Hello {this.props.name}, your age is {this.state.age}</p>
+                <p>Hello {this.props.name}, your age is {this.state.age} Status:  {this.state.status}</p>
                 <hr/>
                 <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
                 <hr/>
